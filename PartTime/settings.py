@@ -1,5 +1,5 @@
 """
-Django settings for PartTime2 project.
+Django settings for PartTime project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
@@ -48,9 +48,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'PartTime2.urls'
+ROOT_URLCONF = 'PartTime.urls'
 
-WSGI_APPLICATION = 'PartTime2.wsgi.application'
+WSGI_APPLICATION = 'PartTime.wsgi.application'
 
 
 # Database
