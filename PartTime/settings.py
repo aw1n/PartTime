@@ -39,6 +39,8 @@ INSTALLED_APPS = (
     'offers',
 )
 
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
+
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
