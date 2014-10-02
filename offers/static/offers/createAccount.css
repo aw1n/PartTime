@@ -1,0 +1,73 @@
+div#createChoiceButtons {
+    margin-top      :   150px;
+    width           :   800px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.createAccountChoice {
+    width           :   150px;
+    height          :   20px;
+    margin-left     :   20px;
+
+    padding         :   100px;
+    line-height     :   10px;
+    font-size       :   big;
+    text-align      :   center;
+    line-height     :   20px;
+
+}
+
+div#createEmployer {
+    float           :   left;
+    background-color:   #C0A0B0;
+
+}
+
+div#createCandidate {
+    float           :   right;
+    background-color:   #C0B0A0;
+}
+
+span.required {
+    float           :   left;
+    color           :   red;
+}
+
+span.notrequired {
+    float           :   left;
+    color           :   white;
+}
+
+fieldset{
+    width           :   700px;
+    margin-left     :   auto;
+    margin-right    :   auto;
+    margin-bottom   :   20px;
+}
+
+fieldset#submit{
+    border          :   0;
+}
+
+
+label{
+    width           :   300px;
+    float           :   left;
+    text-align      :   right;
+}
+
+input{
+    float           :   left;
+    width           :   300px;
+}
+
+input#submitbutton{
+    float           :   right;
+    width           :   100px;
+}
+
+fieldset p{
+    clearset        :   both;
+    padding         :   5px;
+}

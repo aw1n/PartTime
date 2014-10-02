@@ -1,0 +1,62 @@
+html, body {
+    height          :   100%;
+    }
+
+div#banner {
+    background-color:   #FFFFFF;
+
+    }
+
+div#line {
+	height          :   10px;
+	background-color:   #0050A0;
+	clear           :   both;
+
+    }
+
+div#logo {
+    float           :   left;
+
+    }
+
+div#slogan {
+    float           :   left;
+    }
+
+
+.headButtons {
+    float           :   right;
+    width           :   150px;
+    height          :   20px;
+    margin-left     :   20px;
+    margin-bottom   :   10px;
+    line-height     :   10px;
+    font-size       :   small;
+    text-align      :   center;
+    line-height     :   20px;
+    border-radius   :   7px;
+    background-image:   -webkit-linear-gradient(top,#FFF 0%,#91BDD6 100%);
+    background-image:   -moz-linear-gradient(top, #FFFFFF 0%, #91BDD6 100%);
+    background-image:   -ms-linear-gradient(top,#FFF,#91BDD6);
+    background-image:   -o-linear-gradient(top,#FFF,#91BDD6);
+    background-image:   linear-gradient(top,#FFF,#91BDD6);
+    border          :   solid #91BDD6 5px;
+    box-shadow      :   0px 0px 0px 5px #fff, 5px 3px 12px #000000;
+
+    }
+
+a#headLink {
+    float           :   right;
+    width           :   150px;
+    height          :   20px;
+    margin-left     :   50px;
+    font-size       :   small;
+    line-height     :   30px;
+    text-align      :   center;
+
+    }
+
+
+p {
+
+}

@@ -1,0 +1,26 @@
+{% extends "offers/base.html" %}
+
+{% block statics %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'offers/createAccount.css' %}" />
+{% endblock %}
+
+{% block content %}
+<h1>
+    Création de compte
+</h1>
+<p>
+    Etes-vous employeur ou candidat ?
+</p>
+
+<div id="createChoiceButtons">
+
+<a href="/offers/createEmployerAccount">
+<div class="createAccountChoice" id="createEmployer">Employeur</div>
+</a>
+
+<a href="/offers/createCandidateAccount">
+<div class="createAccountChoice" id="createCandidate">Candidat</div>
+</a>
+</div>
+{% endblock %}

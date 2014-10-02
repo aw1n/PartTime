@@ -7,9 +7,9 @@ class Company(models.Model):
     
     company_name        = models.CharField(max_length=100)
     company_web         = models.CharField(max_length=100, null=True, blank=True)
-    company_mail        = models.EmailField(null=True, blank=True)
     company_description = models.TextField(max_length=2000, null=True, blank=True)
 
-
+    def __unicode__(self):
+        return self.company_name
     
     
