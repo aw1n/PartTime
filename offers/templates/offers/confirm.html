@@ -1,0 +1,16 @@
+{% extends "offers/base.html" %}
+
+
+{% block content %}
+<h1>
+    Confirmation de création de compte Employeur
+</h1>
+
+{% if has_account %}
+Votre compte est déja créé
+{% elif expired %}
+Le lien a expiré, veuillez recommencer et valider le lien dans les 48 heures
+{% else %}
+Bravo, vous êtes maintenant connecté
+{% endif %}
+{% endblock %}

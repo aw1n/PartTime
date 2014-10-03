@@ -10,4 +10,5 @@ urlpatterns = patterns('',
     url(r'^createEmployerAccount/$', views.createEmployerAccount, name = 'createEmployerAccount'),
     url(r'^createCandidateAccount/$', views.createCandidateAccount, name = 'createCandidateAccount'),
     url(r'^doCreateEmployerAccount/$', views.doCreateEmployerAccount, name = 'doCreateEmployerAccount'),
+    url(r'^confirm/$', views.confirm, name = 'confirm'),
 )

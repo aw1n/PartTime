@@ -10,78 +10,82 @@
     Création de compte Employeur
 </h1>
 
-
-<form action="{% url 'offers:doCreateEmployerAccount' %}" method="post">
-{% csrf_token %}
-<fieldset>
-    <legend>Informations personnelles</legend>
-    <p>
-    <label>Nom</label>
-    <span class="notrequired">*</span>
-    <input type="text" name="user_name" maxlength="50"/>
-    </p>
-
-    <p>
-    <label>Prénom</label>
-    <span class="notrequired">*</span>
-    <input type="text" name="user_firstname" maxlength="50"/>
-    </p>
-</fieldset>
-
-<fieldset>
-    <legend>Identifiants</legend>
-
-    <p>
-    <label>Login</label>
-    <span class="required">*</span>
-    <input type="text" name="login" required pattern="\w+"/>
-    </p>
-
-    <p>
-    <label>Mot de passe</label>
-    <span class="required">*</span>
-    <input title="Le mot de passe doit contenir au moins 6 caractères dont une majuscule, une minuscule et un chiffre." type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="password" onchange=" this.setCustomValidity(this.validity.patternMismatch ? this.title : ''); if(this.checkValidity()) form.password2.pattern = this.value; ">
-    </p>
-
-    <p>
-
-    <label>Confirmer le mot de passe</label>
-    <span class="required">*</span>
-    <input title="Le mot de passe doit être identique dans les 2 champs" type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="password2" onchange=" this.setCustomValidity(this.validity.patternMismatch ? this.title : ''); ">
-    </p>
-
-    <p>
-    <label>E-mail</label>
-    <span class="required">*</span>
-    <input type="email" name="email" required/>
-    </p>
-</fieldset>
-
-<fieldset>
-    <legend>Entreprise</legend>
-
-    <p>
-    <label>Nom</label>
-    <span class="required">*</span>
-    <input type="text" name="company_name" maxlength="100" required/>
-    </p>
-
-    <p>
-    <label>Site web</label>
-    <span class="notrequired">*</span>
-    <input type="text" name="company_web"/>
-    </p>
-
-
-    <p>
-    <label>Description</label>
-    <span class="notrequired">*</span>
-    <textarea name="company_description" rows="10" cols="50"></textarea>
-    </p>
-</fieldset>
-<fieldset id="submit">
-    <input id="submitbutton" type="submit" value="Enregistrer" />
-</fieldset>
-</form>
-
+{% if has_account %}
+	Vous ne pouvez pas créer de compte utilisateur par ce que vous êtes déja connécté. Veuillez vous déconnecter.
+{% elif created %}
+	C'est presque fini ! Un email vous a été envoyé, merci de cliquer sur le lien qu'il contient pour valider votre inscription"
+{% else %}
+	<form action="{% url 'offers:doCreateEmployerAccount' %}" method="post">
+	{% csrf_token %}
+	<fieldset>
+	    <legend>Informations personnelles</legend>
+	    <p>
+	    <label>Nom</label>
+	    <span class="notrequired">*</span>
+	    <input type="text" name="user_lastname" maxlength="50"/>
+	    </p>
+	
+	    <p>
+	    <label>Prénom</label>
+	    <span class="notrequired">*</span>
+	    <input type="text" name="user_firstname" maxlength="50"/>
+	    </p>
+	</fieldset>
+	
+	<fieldset>
+	    <legend>Identifiants</legend>
+	
+	    <p>
+	    <label>Login</label>
+	    <span class="required">*</span>
+	    <input type="text" name="username" required pattern="\w+"/>
+	    </p>
+	
+	    <p>
+	    <label>Mot de passe</label>
+	    <span class="required">*</span>
+	    <input title="Le mot de passe doit contenir au moins 6 caractères dont une majuscule, une minuscule et un chiffre." type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="password" onchange=" this.setCustomValidity(this.validity.patternMismatch ? this.title : ''); if(this.checkValidity()) form.password2.pattern = this.value; ">
+	    </p>
+	
+	    <p>
+	
+	    <label>Confirmer le mot de passe</label>
+	    <span class="required">*</span>
+	    <input title="Le mot de passe doit être identique dans les 2 champs" type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" name="password2" onchange=" this.setCustomValidity(this.validity.patternMismatch ? this.title : ''); ">
+	    </p>
+	
+	    <p>
+	    <label>E-mail</label>
+	    <span class="required">*</span>
+	    <input type="email" name="email" required/>
+	    </p>
+	</fieldset>
+	
+	<fieldset>
+	    <legend>Entreprise</legend>
+	
+	    <p>
+	    <label>Nom</label>
+	    <span class="required">*</span>
+	    <input type="text" name="company_name" maxlength="100" required/>
+	    </p>
+	
+	    <p>
+	    <label>Site web</label>
+	    <span class="notrequired">*</span>
+	    <input type="text" name="company_web"/>
+	    </p>
+	
+	
+	    <p>
+	    <label>Description</label>
+	    <span class="notrequired">*</span>
+	    <textarea name="company_description" rows="10" cols="50"></textarea>
+	    </p>
+	</fieldset>
+	<fieldset id="submit">
+	    <input id="submitbutton" type="submit" value="Enregistrer" />
+	</fieldset>
+	</form>
+{% endif %}
 {% endblock %}

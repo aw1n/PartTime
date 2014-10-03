@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
 <head>
     {% load staticfiles %}
     <link rel="stylesheet" type="text/css" href="{% static 'offers/style.css' %}" />
     {% block statics %}{% endblock %}
     <title>{% block title %}Part Time{% endblock %}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 
 <body>
@@ -15,11 +16,11 @@
         <div id="slogan">Le spécialiste de l'emploi à temps partiel</div>
 
         {% if user.is_authenticated %}
-        <a href="/offers/logout"><div class="headButtons">Se déconnecter</div></a>
-        <a href="/offers/profile" id="headLink">{{ user.get_username }}</a>
+        	<a href="/offers/logout"><div class="headButtons">Se déconnecter</div></a>
+        	<a href="/offers/profile" id="headLink">{{ user.get_username }}</a>
         {% else %}
-        <a href="/offers/createAccount"><div class="headButtons">Créer un compte</div></a>
-        <a href="/offers/login"><div class="headButtons">S'identifier</div></a>
+        	<a href="/offers/createAccount"><div class="headButtons">Créer un compte</div></a>
+        	<a href="/offers/login"><div class="headButtons">S'identifier</div></a>
         {% endif %}
 
     <div id="line">
